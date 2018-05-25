@@ -3,7 +3,7 @@
 int opOr(int a, int b); 
 int opAnd(int a, int b);
 int opXor(int a, int b);
-
+int printBinario(int r);
  
 int main() {
  	int a, b;
@@ -23,47 +23,33 @@ int main() {
 
 
 int opAnd(int a, int b) {
-	int r = a & b, i = 0, j, q, vet[32];
-	
-	do {
-		q = r / 2;
-		vet[i] = r % 2;
-		r = q;
-		i++;
-	} while(q >= 2);
-		vet[i] = r;
-		printf("\nAND: ");
-	for(j = i; j > 0; j--) {
-		printf("%d", vet[j]);
-	}	
-	
-	
+		int r = a & b;
+	printf("\nAND: ");
+	printBinario(r);
 	
 }
 
 
 int opOr(int a, int b) {
-	int r = a | b, i = 0, j, q, vet[32];
-	
-	do {
-		q = r / 2;
-		vet[i] = r % 2;
-		r = q;
-		i++;
-	} while(q >= 2);
-		vet[i] = r;
-		printf("\nOR: ");
-	for(j = i; j > 0; j--) {
-		printf("%d", vet[j]);
-	}	
-	
+	int r = a | b;
+	printf("\nOR: ");
+	printBinario(r);
 	
 	return 0;
 }
 
 
 int opXor(int a, int b) {
-		int r = a ^ b, i = 0, j, q, vet[32];
+	int r = a ^ b;
+	printf("\nXOR: ");
+	printBinario(r);
+	
+
+	return 0;
+}
+
+int printBinario(int r) {
+		int i = 0, j, q, vet[32];
 	
 	do {
 		q = r / 2;
@@ -72,12 +58,12 @@ int opXor(int a, int b) {
 		i++;
 	} while(q >= 2);
 		vet[i] = r;
-		printf("\nXOR: ");
-	for(j = i; j >= 0; j--) {
+	for(j = i; j > 0; j--) {
 		printf("%d", vet[j]);
 	}	
 	
-	return 0;
+
+	
 }
 
 
