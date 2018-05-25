@@ -10,7 +10,8 @@ int main() {
  	
  	printf("Digite dois números A e B: \n");
 	scanf("%d%d",&a,&b);
- 	 printf("%d", opAnd(a,b));
+ 	 
+	 printf("%d", opAnd(a,b));
 	 printf("%d", opOr(a,b));
 	 printf("%d", opXor(a,b));
  	
@@ -29,9 +30,9 @@ int opAnd(int a, int b) {
 		vet[i] = r % 2;
 		r = q;
 		i++;
-	} while(q != 1 && q > 0);
+	} while(q >= 2);
 		vet[i] = r;
-		printf("AND: ");
+		printf("\nAND: ");
 	for(j = i; j > 0; j--) {
 		printf("%d", vet[j]);
 	}	
@@ -49,12 +50,13 @@ int opOr(int a, int b) {
 		vet[i] = r % 2;
 		r = q;
 		i++;
-	} while(q != 1 && q > 0);
+	} while(q >= 2);
 		vet[i] = r;
 		printf("\nOR: ");
 	for(j = i; j > 0; j--) {
 		printf("%d", vet[j]);
 	}	
+	
 	
 	return 0;
 }
@@ -68,7 +70,7 @@ int opXor(int a, int b) {
 		vet[i] = r % 2;
 		r = q;
 		i++;
-	} while(q != 1 && q > 0);
+	} while(q >= 2);
 		vet[i] = r;
 		printf("\nXOR: ");
 	for(j = i; j >= 0; j--) {
