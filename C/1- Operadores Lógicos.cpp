@@ -1,9 +1,9 @@
 #include <stdio.h>
- 
+//Name: Vinicius Mangueira Correia
 int opOr(int a, int b); 
 int opAnd(int a, int b);
 int opXor(int a, int b);
-int printBinario(int r);
+void printBinario(int r);
  
 int main() {
  	int a, b;
@@ -48,7 +48,7 @@ int opXor(int a, int b) {
 	return 0;
 }
 
-int printBinario(int r) {
+void printBinario(int r) {
 		int i = 0, j, q, vet[32];
 	
 	do {
