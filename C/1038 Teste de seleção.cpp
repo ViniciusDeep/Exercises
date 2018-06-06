@@ -40,7 +40,7 @@ int main()
 
         printf("Total: R$ %.2lf\n",y*1.50);
 
-        break;
+         break;
 
     }
 
