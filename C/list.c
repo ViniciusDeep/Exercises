@@ -82,9 +82,16 @@ void genreSelected() {
     }
 }
 
-void selectFav(char name[10]) {
+void selectFav() {
+    int genreFav;
+    scanf("%d",&genreFav);
     for(int i = 0; i < 5: i++) {
-        
+        if(band[i].numOfRank == genreFav) {
+            printf("%s\n",band[i].name);
+            printf("%s\n",band[i].genre);
+            printf("%d\n",band[i].numOfComp);
+            printf("%d\n",band[i].numOfRank);
+        }
     }
     
 }
